@@ -1,0 +1,30 @@
+package tn.esprim.gestionfoyer.entities;
+
+
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import java.io.Serializable;
+import java.util.List;
+
+@Entity
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+
+public class Reservation implements Serializable {
+    @Id
+    private String idReservation;
+    private String anneUniversite;
+    private Boolean estValide;
+    @ManyToMany(cascade = CascadeType.ALL)
+    private List<Etudiant> etudiants;
+
+}
