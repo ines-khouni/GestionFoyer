@@ -31,3 +31,24 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# IntelliJ et fichiers locaux
+.idea/
+*.iml
+
+# Fichiers sensibles
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Fichiers générés
+target/
+build/
+out/
+*.log
+
+# Configuration locale contenant des secrets
+application-local.properties
+application-local.yml

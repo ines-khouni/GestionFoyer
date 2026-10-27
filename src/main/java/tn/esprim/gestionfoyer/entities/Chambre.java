@@ -19,12 +19,12 @@ public class Chambre implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long idChambre;
+    private Long idChambre;
 
     private Long numeroChambre;
 
     @Enumerated(EnumType.STRING)
-    private TypeChambre TypeC;
+    private TypeChambre typeC;
 
     @ManyToOne
     private Bloc bloc;
